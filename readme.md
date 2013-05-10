@@ -1,8 +1,5 @@
-micrositeTemplates
-==================
+#microsite templates
 
-
-## add a new component
-
-bower install {}
-git://github.com/TechTarget/slideProjectorCarousel.git
+'''
+git clone git@github.com:TechTarget/micrositeTemplates.git
+'''
