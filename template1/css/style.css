@@ -1,0 +1,781 @@
+#micrositeAdvertisement {
+  overflow: hidden;
+  margin: 15px 0 0 0;
+  height: 25px;
+  background-color: #999;
+  color: #fff;
+}
+#micrositeAdvertisement h3 {
+  float: left;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 25px;
+}
+#micrositeAdvertisement #micrositeClose {
+  float: right;
+  border-left: 1px solid #b1b1b1;
+}
+#micrositeAdvertisement a {
+  display: block;
+  padding: 0 10px 0 20px;
+  background: url(../images/iconMicrositeClose.png) 7px 6px no-repeat;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 25px;
+}
+#micrositeAdvertisement a:hover {
+  text-decoration: none;
+}
+
+/* normalize browser defaults as much as possible */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* 'namespace' as much of normalize as possible due to embedded microsites */
+#micrositeContainer {
+  background-color: #fff;
+  color: #000;
+  font-family: arial, sans-serif;
+  font-size: 80%;
+}
+#micrositeContainer * {
+  box-sizing: border-box;
+}
+#micrositeContainer h1, #micrositeContainer h2, #micrositeContainer h3, #micrositeContainer h4, #micrositeContainer h5, #micrositeContainer h6 {
+  line-height: 1em;
+  margin: 0 0 1em;
+  padding: 0;
+}
+#micrositeContainer p {
+  margin: 0 0 1em;
+}
+#micrositeContainer a {
+  color: #274b6b;
+  text-decoration: none;
+}
+#micrositeContainer a:visited {
+  color: #551a8b;
+}
+#micrositeContainer a:hover {
+  color: #06e;
+  text-decoration: underline;
+}
+#micrositeContainer a:focus {
+  background-color: #eee;
+  border: none;
+}
+#micrositeContainer a:hover, #micrositeContainer a:active {
+  outline: 0;
+}
+#micrositeContainer b, #micrositeContainer strong {
+  font-weight: bold;
+}
+#micrositeContainer blockquote {
+  margin: 1em 40px;
+}
+#micrositeContainer hr {
+  border-top: 1px solid #ccc;
+  border: 0;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+#micrositeContainer pre, #micrositeContainer code, #micrositeContainer kbd, #micrositeContainer samp {
+  _font-family: 'courier new', monospace;
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+#micrositeContainer pre {
+  white-space: pre-wrap;
+  white-space: pre;
+  word-wrap: break-word;
+}
+#micrositeContainer small {
+  font-size: 85%;
+}
+#micrositeContainer sub, #micrositeContainer sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+#micrositeContainer sup {
+  top: -0.5em;
+}
+#micrositeContainer sub {
+  bottom: -0.25em;
+}
+#micrositeContainer ul, #micrositeContainer ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+#micrositeContainer dd {
+  margin: 0 0 0 40px;
+}
+#micrositeContainer nav ul, #micrositeContainer nav ol {
+  list-style-image: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#micrositeContainer img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  vertical-align: middle;
+}
+#micrositeContainer iframe {
+  border: none;
+}
+#micrositeContainer figure {
+  margin: 0;
+}
+#micrositeContainer table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#micrositeContainer th, #micrositeContainer td {
+  vertical-align: top;
+}
+
+#micrositeContainer {
+  border-top: none;
+  margin: 0 0 15px;
+}
+#micrositeContainer #micrositeContainerInner {
+  margin: 0;
+}
+#micrositeContainer #micrositeContainerInner #micrositeContainerCompress {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#micrositeContent {
+  overflow: hidden;
+  margin: 0 15px;
+}
+#micrositeContent #micrositeContentColumnFull {
+  margin: 0;
+}
+#micrositeContent #micrositeContentColumnLeft {
+  float: left;
+  width: 620px;
+}
+#micrositeContent #micrositeContentColumnRight {
+  float: right;
+  width: 300px;
+}
+#micrositeContent .micrositeContentColumnSpan {
+  clear: both;
+}
+
+#micrositeContainer {
+  border: 1px solid #c8c8c8;
+}
+
+.componentHeader {
+  color: #274b6b;
+  margin: 0 0 8px !important;
+}
+
+.micrositeModuleContainer {
+  margin: 0;
+}
+.micrositeModuleContainer .micrositeModuleHeader {
+  margin: 0;
+}
+.micrositeModuleContainer .micrositeModuleHeader h3 {
+  margin: 0;
+}
+
+/* copy these along with content tabs since they're used in the panel views */
+.mediaBlock, .mediaBlockContent {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+
+.mediaBlock img {
+  float: left;
+  margin-right: 10px;
+  display: block;
+}
+
+.oneColList {
+  clear: both;
+  margin: -10px 0 0;
+}
+.oneColList > ul {
+  clear: both;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  overflow: hidden;
+}
+.oneColList > ul li {
+  border-top: 1px solid #ddd;
+  margin: 15px 0 5px;
+  padding: 15px 0 0;
+}
+.oneColList > ul > li:first-child {
+  border: none;
+  margin-top: 0;
+}
+.oneColList > ul h4 {
+  font-size: 16px;
+  margin: 0 0 5px !important;
+}
+.oneColList > ul p {
+  margin: 0 0 5px !important;
+}
+
+.twoColGrid {
+  clear: both;
+}
+.twoColGrid > ul {
+  clear: both;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  overflow: hidden;
+}
+.twoColGrid > ul > li {
+  clear: left;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+}
+.twoColGrid > ul > li:first-child {
+  border: none;
+  margin-top: 0;
+}
+.twoColGrid .gridItem {
+  width: 46%;
+  float: left;
+  margin: 15px 10px;
+}
+.twoColGrid .gridItem:first-child {
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+}
+.twoColGrid .gridItem p {
+  margin: 10px 0 0 !important;
+  line-height: 1.1 !important;
+}
+.twoColGrid .gridItem .mediaBlockImage {
+  width: 80px;
+  height: 100px;
+}
+
+.wayfinder .wayfinderContent {
+  width: 600px;
+  margin: 0 0 10px;
+}
+.wayfinder h2 {
+  color: #274b6b;
+  margin: 0 0 8px !important;
+}
+
+#micrositeHeader {
+  background-color: #274b6b;
+  color: white;
+  position: relative;
+  margin: 0 0 20px;
+  padding: 40px 20px;
+}
+#micrositeHeader #micrositeHeaderBanner p {
+  margin: 0 !important;
+}
+#micrositeHeader #micrositeHeaderBanner h1 {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NTJDOTA0RUMyQjIwNjgxMTgwODNENjQ3Nzg2MzMyMUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzQwOUM3NzZCNUU4MTFFMjgxRTRDQjc0ODcwOEI2RDMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzQwOUM3NzVCNUU4MTFFMjgxRTRDQjc0ODcwOEI2RDMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYyRTAzRTVENEMyMDY4MTE4MjJBRTM1NTQ1ODg1NkM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUyQzkwNEVDMkIyMDY4MTE4MDgzRDY0Nzc4NjMzMjFEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+0PcPIAAABQVJREFUeNqsWWtsVEUUnrm7WwpSMbamJoKYCFWQqjEKCSY+/1iDUq1VtKgRURMTjDGIggiotT+qiBIfiGKNFi1hEZv9g8+EP4qJmiCpgqExiJqmxdoS2bLd7o7f7H4r1+u9s/exJ/nS3ntnznxz5pwzZ2alelj4lZXAOLDZs4UCJHARkOCztzQD1wKPU69R4j5JPgq8AEwAeeBVEU1uBN4C6oBJ1H/S1MHyoXQ18JJtYq8Aj0QguQjoIUktDwGvcQ1CEZUk2cH/7X02ccmCyi3AB0CN4/0yYBswNQzRp4DnDf06ApK9FehyIVmSu2nZyX6JShJ8zmFJN//upNXLyR205LQy7e4B3nWzrOVCcgOwJoCl2tnHS9oYOJN86rud7U83RX0n01AQ0ZNdz2T0jOPbvRw0EVDnEqCK/f+2WzTGAFkZIZo3FPxW/qvzfmBrCJJ2n+4GzixZ9DTgWeayqLIaNMdB9jcGRlVEfYsZgA9qouuAx0QlRBXCYH1hfZSolNxcWvrPgCMVUzsu+kByrzFfBJPjwMea6OfAbcCvkVVKcVBkRCs22WbqrQTJ+/Tylxz/W+4av0RQ+mNhwlL8hL8jwF3ApxH0jTCvfuTMo9+T7MEQSvsYpX22d0NMM5+E0DdEkr1eCX8/E+7hAEq/A1qAQy7f/qJlewPo032WAqlyW+gBpoUDPpTu5/Z4yNBmmH6W8qFvALjTzWUso7/Zyar/pZxvOKF+n1bSlk2WIdnm5Sqm6unngs8q8YMulQfi9WIwXlcsm5XYx4GDpDW9FS4HdgpWyYOnvv0BtAJfelZAGWncPPqzMrHoSGJ6cm39mvkJNSE6Btq/mpH9fTGi+5hXFWuJLP64ZvxRXc7BF8b2IFj6ixFzdCbcB62/NpZqV5+XKrPZSCsnLeuEnCKUlGLpjC0x/SyVJpR3tI2LKvmnuNJ6QCTUqOfmhF5Whp6EatmyirWG+cx0UhqrrwYQhV+pxmqVKWhOW9UL8C5lCdUGqx12Es1D3zi3JReiZwBv431LqVLJCXEODmI7ZTGV7fUs0fQSeWAegK0r32jZhoypvIir3Hy834Hvs937CjdMA7qAFstRAOP5bFkk2+TR1zOY5tHp5xisfZneg4FZPgKplge6ZkObs4D3eEL1FfUXk8CFPgjM5YTmGtrUsVS7wYc+3XY70FSO6BXALuD8AGnnUu7HjR4Da0veFECf9uP3ma5ciV7OhDxLBJcLOEE72XpgB3B9CH3aVd5h/fAfogtolXMjVDuz9UR1EMZEppanzusi6JvKE2lr6SiinfdNYHr08jHfkBU1u4Zzlxyrj+9bmIuusIaWrdUWvaoyJEUhNU2oKQ2j+TkLK1jha8s2WTzidlbmyBQTk+Xg0zMTyWVKibEKEdUuuVwv/RhvOyYCXjy4iT7ft0tskqpYd+hlq46gL8lCZjR+avst3DXp51Uhla7jNVBJPuR9wbaQx+YkLyDSbnn0SQ4YRPRKrHWQLEk3BxsJqLObN3xprysdxQGVx8Buoie30fC9h+7V49MNtvPONO2ncG6nK+QNCrO8AtroY/BeFtrlLNvFq6B0kApf338+YVjuVT5JlmQ3T5bDHt+1L68AMkGPIlpe5HWPvbTMUeHLIQIkxVPuccf7rVzuE6Yrw3KyyXaBliXJLRFSzhc8uQ7x+XVR/E3AuJH5/VVks23J36hAEt/DI/Q1jIWyP9/8I8AAItBJTr9sfKsAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  line-height: 40px;
+  padding: 0 0 0 60px;
+  margin: 0;
+}
+#micrositeHeader #micrositeHeaderNavigation {
+  display: none;
+}
+
+/* footer */
+#micrositeFooter {
+  clear: both;
+  background-color: #274b6b;
+  color: white;
+}
+#micrositeFooter h3 {
+  font-size: 30px;
+  line-height: 40px;
+  padding: 40px;
+  margin: 0;
+}
+
+/* bitpipe abstract */
+.resDetail {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 30px 50px;
+}
+
+.resTitleLogo {
+  clear: both;
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+.resTitleLogo h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px !important;
+}
+.resTitleLogo h3 a {
+  color: #15204f;
+}
+.resTitleLogo h4 {
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.resAbstract {
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+}
+.resAbstract .col1 {
+  float: left;
+  padding-right: 25px;
+  width: 190px;
+}
+.resAbstract .col1 td {
+  font-size: 12px;
+  padding: 0 25px 5px 0;
+  vertical-align: top;
+}
+.resAbstract .col1 td strong {
+  font-weight: bold;
+}
+.resAbstract .col2 {
+  float: left;
+  width: 605px;
+}
+.resAbstract .col2 .abstract {
+  border-top: 1px solid #ccc;
+  padding: 10px 0 0;
+}
+.resAbstract .col2 h5 {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 2px;
+  text-transform: uppercase;
+}
+.resAbstract .col2 p {
+  margin-bottom: 10px;
+}
+.resAbstract .col2 a.viewNow {
+  background: url(../images/viewNowGradient.png) repeat-x 0 0;
+  border-radius: 8px;
+  color: #fff !important;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  padding: 5px 30px;
+  text-align: center;
+}
+.resAbstract .col2 a.viewNow:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+}
+
+.socialShare-addThis {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  line-height: 0;
+}
+.socialShare-addThis a {
+  display: inline-block;
+  margin: 0 0 0 8px;
+  padding: 0 !important;
+}
+.socialShare-addThis.addThisVertical {
+  position: absolute;
+  top: 0;
+  background: #fff;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(85%, #ffffff), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(left, #ffffff 85%, #dddddd 100%);
+  background-image: -moz-linear-gradient(left, #ffffff 85%, #dddddd 100%);
+  background-image: -o-linear-gradient(left, #ffffff 85%, #dddddd 100%);
+  background-image: linear-gradient(left, #ffffff 85%, #dddddd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd',GradientType=1 );
+}
+.socialShare-addThis.addThisVertical a {
+  display: block;
+  margin: 5px;
+}
+.socialShare-addThis.addThisVertical.addthis_default_style {
+  width: 26px;
+  left: -26px;
+  margin: 0 10px;
+}
+.socialShare-addThis.addThisVertical.addthis_default_style a {
+  margin: 5px;
+}
+.socialShare-addThis.addThisVertical.addthis_20x20_style {
+  width: 35px;
+  left: -37px;
+}
+.socialShare-addThis.addThisVertical.addthis_20x20_style a {
+  margin: 10px;
+}
+.socialShare-addThis.addThisVertical.addthis_32x32_style {
+  width: 52px;
+  left: -63px;
+  margin: 10px;
+}
+.socialShare-addThis.addThisVertical.addthis_32x32_style a {
+  margin: 12px;
+}
+
+.socialShare-outer {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.socialShare-outer .socialShare-inner {
+  margin: 0 auto;
+  position: relative;
+}
+
+.contentTabs {
+  border: 1px solid #cccccc;
+  margin: 0 0 25px;
+  overflow: hidden;
+  position: relative;
+}
+.contentTabs .contentTabsNav {
+  background-color: #fafafa;
+  position: relative;
+}
+.contentTabs .contentTabsNav ul {
+  background-color: #ececec;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+.contentTabs .contentTabsNav li a {
+  color: black !important;
+  background-color: transparent !important;
+  display: block;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  text-transform: uppercase;
+  padding: 0 33px;
+}
+.contentTabs .contentTabsNav li a:hover {
+  color: white !important;
+  background-color: #19527f !important;
+  text-decoration: none !important;
+}
+.contentTabs .contentTabsNav li.active a {
+  color: white !important;
+  background-color: #19527f !important;
+  border-bottom: none;
+  position: relative;
+}
+.contentTabs .arrow, .contentTabs .verticalNavigationArrow, .contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after, .contentTabs.tabsVerticalRight .contentTabsNav li.active a:before, .contentTabs .horizontalNavigationArrow, .contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after, .contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 0;
+  width: 0;
+}
+.contentTabs .verticalNavigationArrow, .contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after, .contentTabs.tabsVerticalRight .contentTabsNav li.active a:before {
+  top: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+}
+.contentTabs .horizontalNavigationArrow, .contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after, .contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
+  left: 46%;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.contentTabs .verticalNavigation, .contentTabs.tabsVerticalLeft .contentTabsNav, .contentTabs.tabsVerticalRight .contentTabsNav {
+  width: 180px;
+  height: 450px;
+}
+.contentTabs .verticalNavigation li, .contentTabs.tabsVerticalLeft .contentTabsNav li, .contentTabs.tabsVerticalRight .contentTabsNav li {
+  border-bottom: 1px solid #cccccc;
+}
+.contentTabs.tabsVerticalLeft .contentTabsNav {
+  float: left;
+  border-right: 1px solid #cccccc;
+}
+.contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after {
+  right: -12px;
+  border-left: 12px solid #19527f;
+}
+.contentTabs.tabsVerticalLeft .contentTabsPanelCollection {
+  float: right;
+  width: 740px;
+}
+.contentTabs.tabsVerticalRight .contentTabsNav {
+  float: right;
+  border-left: 1px solid #cccccc;
+}
+.contentTabs.tabsVerticalRight .contentTabsNav li.active a:before {
+  left: -12px;
+  border-right: 12px solid #19527f;
+}
+.contentTabs.tabsVerticalRight .contentTabsPanelCollection {
+  float: left;
+  width: 740px;
+}
+.contentTabs .horizontalNavigation ul, .contentTabs.tabsHorizontalTop .contentTabsNav ul, .contentTabs.tabsHorizontalBottom .contentTabsNav ul {
+  margin-bottom: 20px !important;
+  text-align: center;
+}
+.contentTabs .horizontalNavigation li, .contentTabs.tabsHorizontalTop .contentTabsNav li, .contentTabs.tabsHorizontalBottom .contentTabsNav li {
+  display: inline-block;
+  border-left: 1px solid #fff;
+  border-bottom: none;
+  width: auto;
+}
+.contentTabs .horizontalNavigation li:first-child, .contentTabs.tabsHorizontalTop .contentTabsNav li:first-child, .contentTabs.tabsHorizontalBottom .contentTabsNav li:first-child {
+  border-left: none;
+}
+.contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after {
+  border-bottom: 8px solid white;
+  bottom: 0;
+}
+.contentTabs.tabsHorizontalBottom .contentTabsNav {
+  position: relative;
+  top: 470px;
+}
+.contentTabs.tabsHorizontalBottom .contentTabsNav ul {
+  border-top: 1px solid #cccccc;
+}
+.contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
+  border-top: 8px solid white;
+  top: 0;
+}
+.contentTabs.tabsHorizontalBottom .contentTabsPanelCollection {
+  margin-top: -35px;
+  margin-bottom: 35px;
+}
+.contentTabs.tabsNone .contentTabsNav {
+  display: none;
+}
+.contentTabs .contentTabsPanel {
+  display: none;
+  padding: 10px;
+  color: #4c4d4f;
+  height: 430px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.contentTabs .contentTabsPanel:first-child {
+  display: block;
+}
+.contentTabs .contentTabsPanel p {
+  margin: 0 0 10px !important;
+}
+.contentTabs .contentTabsPanel h3 {
+  font-size: 16px !important;
+  margin: 0 0 5px !important;
+}
+.contentTabs .contentTabsPanel .contentTabsPanelIntroGraphic {
+  border: 1px solid #ccc !important;
+  float: right;
+  margin: 0 0 10px 10px;
+}
+.contentTabs.pinnedPanelTop .contentTabsPanel {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.contentTabs.pinnedPanelTop .contentTabsPanelContent {
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.contentTabs.pinnedPanelTop .contentTabsPanelIntro {
+  height: 150px;
+  padding: 0 0 10px;
+  margin: 0 0 15px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.contentTabs.pinnedPanelLeft .contentTabsPanel {
+  padding: 0 10px 10px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.contentTabs.pinnedPanelLeft .contentTabsPanelContent {
+  float: right;
+  width: 680px;
+  height: 430px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.contentTabs.pinnedPanelLeft .contentTabsPanelIntro {
+  float: left;
+  width: 230px;
+  height: 430px;
+  overflow: hidden;
+}
+.contentTabs.pinnedPanelLeft .oneColList, .contentTabs.pinnedPanelLeft .twoColGrid {
+  clear: none;
+}
+.contentTabs.pinnedPanelLeft .contentTabsPanelIntroGraphic {
+  float: none;
+  margin: 0 0 10px;
+}
+
+/* may or may not be used */
+.contentTabsCaption {
+  font-size: 26px;
+  margin: 0 0 5px !important;
+}
+
+.featuredVideo {
+  border: 1px solid #dedede;
+  margin: 0 0 25px;
+  padding: 10px 0 10px 10px;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+.featuredVideo .featuredVideoPlayer {
+  background-color: black;
+  float: left;
+  height: 360px;
+  position: relative;
+  width: 640px;
+}
+.featuredVideo.noPlaylist .featuredVideoPlayer {
+  width: 920px;
+  height: 520px;
+}
+.featuredVideo .featuredVideoPlaylist {
+  background-color: #ececec;
+  float: right;
+  height: 380px;
+  margin: -10px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  visibility: hidden;
+  width: 284px;
+}
+.featuredVideo .featuredVideoPlaylist .featuredVideoPlaylistHeader {
+  color: white;
+  background-color: #666666;
+  font-size: 13px !important;
+  font-weight: normal;
+  padding: 4px 8px !important;
+  margin: 0 !important;
+}
+.featuredVideo .featuredVideoPlaylist ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 3px 0 3px !important;
+}
+.featuredVideo .featuredVideoPlaylist ul li {
+  cursor: pointer;
+  background-color: white;
+  min-height: 66px;
+  margin-bottom: 2px;
+  border-left: 6px solid #cccccc;
+}
+.featuredVideo .featuredVideoPlaylist ul li.active {
+  border-left: 6px solid #19527f;
+}
+.featuredVideo .featuredVideoPlaylist .featuredVideoTitle {
+  font-size: 12px;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  color: black;
+  font-weight: normal;
+}
+.featuredVideo .featuredVideoPlaylist .mediaBlock, .featuredVideo .featuredVideoPlaylist .mediaBlockContent {
+  overflow: hidden;
+  _overflow: visible;
+  *zoom: 1;
+}
+.featuredVideo .featuredVideoPlaylist .mediaBlock {
+  padding: 8px 5px;
+  margin: 1px 2px 0;
+}
+.featuredVideo .featuredVideoPlaylist .mediaBlock img {
+  float: left;
+  margin-right: 10px;
+  display: block;
+  width: 100px;
+  height: 50px;
+}
+.featuredVideo .featuredVideoPlaylist .featuredVideoSummary {
+  display: none;
+}
+.featuredVideo .featuredVideoPlaylistTooltip {
+  display: none;
+  z-index: 1;
+  border: 1px solid #444;
+  background-color: #fff;
+  position: absolute;
+  right: 292px;
+  top: 0;
+  min-height: 48px;
+  width: 270px;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 16px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.featuredVideo .featuredVideoPlaylistTooltip:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: -8px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #444;
+}
+.featuredVideo .featuredVideoPlayerOverlay {
+  height: 360px;
+  width: 640px;
+  background-color: #ccc;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
