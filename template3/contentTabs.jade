@@ -1,0 +1,21 @@
+- var tabs = ['Powerful Integration Testing & QA', 'Virtual Service Apps', 'Operational Effeciency', 'Infrastructure Integration'], graphicSize = '80x100', intoGraphicSize = '120x120';
+
+.contentTabs
+  .contentTabsNav
+      ul
+        for tab in tabs
+          li: a(href='#') #{tab}
+  .contentTabsPanelCollection
+    each tab, index in tabs
+      .contentTabsPanel
+        .contentTabsPanelContent.oneColList
+          .contentTabsPanelIntro
+            img.contentTabsPanelIntroGraphic(src='images/placeHolder-contentTabs.png', height='200', width='225', alt='')
+            img.contentTabsPanelIntroGraphic(src='images/placeHolder-contentTabs.png', height='200', width='225', alt='')
+          ul
+            - for (var i = 0; i < 10; ++i) {
+              li
+                h4: a(href='replaceMe') IBM Rational Named Software Testing Solutions Champion
+                p As our need to deliver software faster and meet market demands has increased, something usually has to be cut. Need to deliver software faster and meet market demands has increased.
+                p: a.viewNow(href='replaceMe') &gt; View Now
+            - }

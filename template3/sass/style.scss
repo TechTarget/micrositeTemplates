@@ -1,0 +1,19 @@
+// Template 1
+// last update: 2013-05-01
+
+@import "_normalize";
+@import "_layout";
+@import "_general";
+@import "_wayfinder";
+@import "_header";
+@import "_footer";
+@import "_advertisementHeader";
+@import "_bitpipeAbstract";
+
+// components
+@import "_addThisShare";
+@import "_contentTabs";
+@import "_featuredVideo";
+
+// template-specific overrides
+@import "_template3";
