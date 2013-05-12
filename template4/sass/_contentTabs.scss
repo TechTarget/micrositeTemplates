@@ -1,0 +1,312 @@
+// component customization
+@import "_configuration";
+
+.contentTabs {
+  border: 1px solid $ct-border-color;
+  margin: 0 0 25px;
+  overflow: hidden;
+  position: relative;
+
+  // navigation
+  .contentTabsNav {
+    background-color: $ct-navigation-vertical-bgColor;
+    position: relative;
+
+    ul {
+      background-color: $ct-navigation-horizontal-bgColor;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none;
+    }
+
+    li {
+
+      a {
+        color: $ct-tab-color !important;
+        background-color: $ct-tab-bgColor !important;
+        display: block;
+        font-size: $ct-tab-size;
+        height: $ct-tab-height;
+        line-height: $ct-tab-height;
+        text-transform: uppercase;
+        padding: 0 $ct-tab-padding;
+
+        &:hover {
+          color: $ct-tab-hover-color !important;
+          background-color: $ct-tab-hover-bgColor !important;
+          text-decoration: none !important;
+        }
+
+      }
+
+      &.active a {
+        color: $ct-tab-active-color !important;
+        background-color: $ct-tab-active-bgColor !important;
+        border-bottom: none;
+        position: relative;
+      }
+
+    }
+
+  }
+
+  // the triangle/notch/pointer/arrow that's inside/outside the tabs
+  .arrow {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  .verticalNavigationArrow {
+    @extend .arrow;
+    top: 0;
+    border-top: $ct-navigation-vertical-arrow-width-y solid transparent;
+    border-bottom: $ct-navigation-vertical-arrow-width-y solid transparent;
+  }
+
+  .horizontalNavigationArrow {
+    @extend .arrow;
+    left: $ct-navigation-horizontal-arrow-align;
+    border-left: $ct-navigation-horizontal-arrow-width-x solid transparent;
+    border-right: $ct-navigation-horizontal-arrow-width-x solid transparent;
+  }
+
+  .verticalNavigation {
+    width: $ct-navigation-vertical-width;
+    height: $ct-height;
+
+    li {
+      border-bottom: 1px solid $ct-border-color;
+    }
+
+  }
+
+  &.tabsVerticalLeft {
+
+    .contentTabsNav {
+      @extend .verticalNavigation;
+      float: left;
+      border-right: 1px solid $ct-border-color;
+
+      li.active a:after {
+        @extend .verticalNavigationArrow;
+        right: -$ct-navigation-vertical-arrow-width-x;
+        border-left: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
+      }
+
+    }
+
+    .contentTabsPanelCollection {
+      float: right;
+      width: $ct-panel-vertical-width;
+    }
+
+  }
+
+  &.tabsVerticalRight {
+
+    .contentTabsNav {
+      @extend .verticalNavigation;
+      float: right;
+      border-left: 1px solid $ct-border-color;
+
+      li.active a:before {
+        @extend .verticalNavigationArrow;
+        left: -$ct-navigation-vertical-arrow-width-x;
+        border-right: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
+      }
+
+    }
+
+    .contentTabsPanelCollection {
+      float: left;
+      width: $ct-panel-vertical-width;
+    }
+
+  }
+
+  .horizontalNavigation {
+
+    ul {
+      margin-bottom: 20px !important;
+      text-align: $ct-navigation-horizontal-align;
+    }
+
+    li {
+      display: inline-block;
+      border-left: 1px solid #fff;
+      border-bottom: none;
+      width: $ct-navigation-horizontal-tab-width;
+
+      &:first-child {
+        border-left: none;
+      }
+
+    }
+
+  }
+
+  &.tabsHorizontalTop {
+
+    .contentTabsNav {
+
+      @extend .horizontalNavigation;
+
+      ul {
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-bottom: 1px solid $ct-border-color;
+        }
+      }
+
+      li.active a:after {
+        @extend .horizontalNavigationArrow;
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-top: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: $ct-tab-height;
+        } @else if $ct-navigation-horizontal-arrow-type == "innie" {
+          border-bottom: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          bottom: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+  &.tabsHorizontalBottom {
+
+    .contentTabsNav {
+
+      @extend .horizontalNavigation;
+
+      position: relative;
+      top: $ct-height + 20;
+
+      ul {
+        border-top: 1px solid $ct-border-color;
+      }
+
+      li.active a:before {
+        @extend .horizontalNavigationArrow;
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-bottom: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: -10px;
+        } @else if $ct-navigation-horizontal-arrow-type == "innie" {
+          border-top: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: 0;
+        }
+
+      }
+
+    }
+
+    .contentTabsPanelCollection {
+      margin-top: -$ct-navigation-horizontal-height;
+      margin-bottom: $ct-navigation-horizontal-height;
+    }
+
+  }
+
+  // option for disabling any tab navigation
+  &.tabsNone .contentTabsNav {
+    display: none;
+  }
+
+  // panels
+  .contentTabsPanel {
+    display: none;
+    padding: 10px;
+    color: #4c4d4f;
+    height: $ct-height - 20;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    // always display the first panel
+    &:first-child {
+      display: block;
+    }
+
+    p {
+      margin: 0 0 10px !important;
+    }
+
+    h3 {
+      font-size: 16px !important;
+      margin: 0 0 5px !important;
+    }
+
+    .contentTabsPanelIntroGraphic {
+      border: 1px solid #ccc !important;
+      float: right;
+      margin: 0 0 10px 10px;
+    }
+
+  }
+
+  &.pinnedPanelTop {
+
+    .contentTabsPanel {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelContent {
+      height: $ct-height - $ct-pinned-panel-top-height - 20;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelIntro {
+      height: $ct-pinned-panel-top-height;
+      padding: 0 0 10px;
+      margin: 0 0 15px;
+      border-bottom: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+  }
+
+  &.pinnedPanelLeft {
+
+    .contentTabsPanel {
+      padding: 0 10px 10px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelContent {
+      float: right;
+      width: $ct-pinned-panel-left-total-width - $ct-pinned-panel-left-intro-width;
+      height: $ct-height - 20;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelIntro {
+      float: left;
+      width: $ct-pinned-panel-left-intro-width;
+      height: $ct-height - 20;
+      overflow: hidden;
+    }
+
+    .oneColList, .twoColGrid {
+      clear: none;
+    }
+
+    .contentTabsPanelIntroGraphic {
+      float: none;
+      margin: 0 0 10px;
+    }
+
+  }
+
+}
+
+/* may or may not be used */
+.contentTabsCaption {
+  font-size: 26px;
+  margin: 0 0 5px !important;
+}
