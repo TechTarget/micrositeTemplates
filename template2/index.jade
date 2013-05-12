@@ -1,0 +1,16 @@
+extends layoutEmbedded
+
+block content
+  #micrositeContainer
+    #micrositeContainerInner
+      #micrositeContainerCompress
+        include header
+        #micrositeContent
+          #micrositeContentColumnFull
+            include wayfinder
+            include featuredVideo
+            h2.componentHeader Additional Resources
+            include contentTabs
+          #micrositeContentColumnLeft
+          #micrositeContentColumnRight
+        include footer
