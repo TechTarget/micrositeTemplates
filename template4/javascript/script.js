@@ -1,4 +1,4 @@
-// Template 1
+// Template 4
 // last update: 2013-05-01
 
 $(document).ready(function () {
@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
 
   // ContentTabs component
-  $('.contentTabs').eq(0).contentTabs({
+  $('.contentTabs').contentTabs({
     tabLocation: 'top',
     maintainState: true,
     pinPanelIntro: true,

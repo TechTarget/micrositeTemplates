@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
 
   // ContentTabs component
-  $('.contentTabs').eq(0).contentTabs({
+  $('.contentTabs').contentTabs({
     tabLocation: 'top',
     maintainState: true,
     pinPanelIntro: true,
