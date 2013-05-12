@@ -1,13 +1,61 @@
+@import "_configuration";
+
 .wayfinder {
+  margin: 0 0 15px;
 
   .wayfinderContent {
     width: 600px;
-    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 2.4 !important;
   }
 
   h2 {
     color: $microsite-content-header-color;
     margin: 0 0 8px !important;
+  }
+
+  &.wayfinderImage, &.wayfinderVideo {
+
+    border: 1px solid #ccc;
+    height: 260px;
+    position: relative;
+
+    .wayfinderCornerstoneVideo {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 10px 10px 20px;
+      float: right;
+    }
+
+    .wayfinderCornerstoneImage {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+    }
+
+    .wayfinderContent {
+      width: 500px;
+      margin: 20px 0 0 20px;
+      position: relative;
+      z-index: 1;
+
+      p { line-height: 1.5; }
+
+    }
+
+    h2 {
+      width: 400px;
+      line-height: 1.25 !important;
+    }
+
+  }
+
+  &.wayfinderImage {
+    height: 260px;
+  }
+
+  &.wayfinderVideo {
+    height: 306px;
   }
 
 }

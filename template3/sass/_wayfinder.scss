@@ -14,11 +14,18 @@
     margin: 0 0 8px !important;
   }
 
-  &.wayfinderImage {
+  &.wayfinderImage, &.wayfinderVideo {
 
     border: 1px solid #ccc;
     height: 260px;
     position: relative;
+
+    .wayfinderCornerstoneVideo {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 10px 10px 20px;
+      float: right;
+    }
 
     .wayfinderCornerstoneImage {
       position: absolute;
@@ -43,5 +50,12 @@
 
   }
 
+  &.wayfinderImage {
+    height: 260px;
+  }
+
+  &.wayfinderVideo {
+    height: 306px;
+  }
 
 }
