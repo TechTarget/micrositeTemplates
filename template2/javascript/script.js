@@ -1,4 +1,4 @@
-// Template 2
+// template 2
 // last update: 2013-05-12
 
 $(document).ready(function () {
