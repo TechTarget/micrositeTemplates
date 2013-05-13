@@ -29,7 +29,6 @@
         height: $ct-tab-height;
         line-height: $ct-tab-height;
         text-transform: uppercase;
-        padding: 0 10px;
 
         &:hover {
           color: $ct-tab-hover-color !important;
@@ -96,6 +95,10 @@
         border-left: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
       }
 
+      a {
+        padding-left: $ct-navigation-vertical-padding;
+      }
+
     }
 
     .contentTabsPanelCollection {
@@ -118,6 +121,10 @@
         border-right: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
       }
 
+      a {
+        padding-right: $ct-navigation-vertical-padding;
+      }
+
     }
 
     .contentTabsPanelCollection {
@@ -130,18 +137,17 @@
   .horizontalNavigation {
 
     ul {
-      margin-bottom: 20px !important;
       text-align: $ct-navigation-horizontal-align;
     }
 
     li {
       display: inline-block;
-      border-right: 1px solid $ct-border-color;
+      border-left: 1px solid $ct-tab-border-color;
       border-bottom: none;
       width: $ct-navigation-horizontal-tab-width;
 
       &:first-child {
-        border-left: 1px solid $ct-border-color;
+        border-left: none;
       }
 
     }
@@ -153,10 +159,6 @@
     .contentTabsNav {
 
       @extend .horizontalNavigation;
-
-      ul {
-        border-bottom: 1px solid $ct-border-color;
-      }
 
       li.active a:after {
         @extend .horizontalNavigationArrow;
@@ -273,7 +275,7 @@
   &.pinnedPanelLeft {
 
     .contentTabsPanel {
-      padding: 0 10px 10px;
+      padding: 0;
       overflow-y: hidden;
       overflow-x: hidden;
     }
@@ -282,6 +284,7 @@
       float: right;
       width: $ct-pinned-panel-left-total-width - $ct-pinned-panel-left-intro-width;
       height: $ct-height - 20;
+      padding: 0 10px 0;
       overflow-y: scroll;
       overflow-x: hidden;
     }
@@ -289,7 +292,7 @@
     .contentTabsPanelIntro {
       float: left;
       width: $ct-pinned-panel-left-intro-width;
-      padding: 0 5px 0 0;
+      padding: 10px;
       background-color: $ct-pinned-panel-left-bgColor;
       border-right: 1px solid $ct-pinned-panel-left-border-color;
       height: $ct-height - 20;
