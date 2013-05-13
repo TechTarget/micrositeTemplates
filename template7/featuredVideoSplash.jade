@@ -1,0 +1,21 @@
+.featuredVideoSplash
+  .featuredVideoSplashTitle
+    | Featured Video
+  .featuredVideoSplashVideo
+    //- Begin Brightcove player
+    script(language='JavaScript', type='text/javascript', src='http://admin.brightcove.com/js/BrightcoveExperiences.js')
+    object#myExperience.BrightcoveExperience
+     param(name='bgcolor', value='#ffffff')
+     param(name='wmode', value='opaque')
+     param(name='width', value='280')
+     param(name='height', value='155')
+     param(name='playerID', value='2257680021001')
+     param(name='playerKey', value='AQ~~,AAAAAFGE4wo~,g57wOIK2TXIwMm7P5FpCgpCLbizMjs0f')
+     param(name='isVid', value='true')
+     param(name='isUI', value='true')
+     param(name='dynamicStreaming', value='true')
+    script(type='text/javascript')
+       brightcove.createExperiences();
+    //- End Brightcove player
+  .featuredVideoSplashDescription
+    | Learn how IBM helps clients gain a competitive advantage with innovation software and systems designed for the era of big data (2:22)
