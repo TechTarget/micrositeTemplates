@@ -1,0 +1,67 @@
+@import "compass/css3/images";
+
+$as-icon-small-width: 16px;
+$as-icon-medium-width: 20px;
+$as-icon-large-width: 32px;
+
+.socialShare-addThis {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  line-height: 0;
+
+  a {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    padding: 0 !important;
+  }
+
+  &.addThisVertical {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    @include background-image(linear-gradient(left, #fff 85%, #ddd 100%));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=1 );
+
+    a {
+      display: block;
+      margin: 5px;
+    }
+
+    &.addthis_default_style {
+      width: $as-icon-small-width + 10;
+      left: -($as-icon-small-width + 10);
+      margin: 0 10px;
+
+      a { margin: 5px; }
+
+    }
+
+    &.addthis_20x20_style {
+      width: $as-icon-medium-width + 15;
+      left: -($as-icon-medium-width + 17);
+
+      a { margin: 10px; }
+    }
+
+    &.addthis_32x32_style {
+      width: $as-icon-large-width + 20;
+      left: -($as-icon-large-width + 31);
+      margin: 10px;
+
+      a { margin: 12px; }
+    }
+  }
+}
+
+// wrappers for vertical orientation
+.socialShare-outer {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  .socialShare-inner {
+    margin: 0 auto;
+    position: relative;
+  }
+}
