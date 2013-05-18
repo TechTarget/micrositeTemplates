@@ -1,0 +1,41 @@
+@import "_configuration";
+
+#micrositeContainer {
+  border-top: none;
+  margin: 0 0 15px;
+
+  #micrositeContainerInner {
+    margin: 0;
+
+    #micrositeContainerCompress {
+      margin: 0 auto;
+      width: $microsite-width;
+    }
+
+  }
+
+}
+
+#micrositeContent {
+  overflow: hidden;
+  margin: 0 15px;
+
+  #micrositeContentColumnFull {
+    margin: 0;
+  }
+
+  #micrositeContentColumnLeft {
+    float: left;
+    width: $microsite-col-left-width;
+  }
+
+  #micrositeContentColumnRight {
+    float: right;
+    width: $microsite-col-right-width;
+  }
+
+  .micrositeContentColumnSpan {
+    clear: both;
+  }
+
+}
