@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 /* normalize browser defaults as much as possible */
 html {
   font-size: 100%;
@@ -24,7 +26,7 @@ audio, canvas, video {
 /* 'namespace' as much of normalize as possible due to embedded microsites */
 #micrositeContainer {
 
-  * { box-sizing: border-box; }
+  * { @include box-sizing(border-box); }
 
   background-color: #fff;
   color: #000;
