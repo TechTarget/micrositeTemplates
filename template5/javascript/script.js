@@ -22,6 +22,7 @@ $(document).ready(function () {
     pinnedPanelLocation: 'top'
   });
 
+  // HeroCarousel component
   $('.heroCarousel').heroCarousel({
     navigationPosition: 'Outside',
     heroImageLink: true,
