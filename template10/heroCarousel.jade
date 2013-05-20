@@ -1,0 +1,13 @@
+.heroCarousel
+  .heroCarouselWindow
+    ul
+      - for (var i = 1; i < 6; ++i) {
+      li
+        .heroCarouselImage
+          a(href='replaceMe')
+            img(src='images/filmstripCarouselImage#{i}.jpg', height='298', width='946')
+        .heroCarouselContent
+          .heroCarouselHeader This is the header
+          .heroCarouselText This is some text
+          .heroCarouselButton: a(href='') View Now
+      - }

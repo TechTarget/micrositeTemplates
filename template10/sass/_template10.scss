@@ -1,0 +1,7 @@
+
+
+.filmstripWindow > ul > li { border: 1px solid blue; }
+.filmstrip { border: 1px solid pink; }
+.filmstripControls { border: 1px solid green; height: 20px; }
+.filmstripNavigationInline .filmstripControls { border: 1px solid maroon; }
+.filmstripNavigationOutside .filmstripPrevious, .filmstripNavigationOutside .filmstripNext { background-color: red; }
