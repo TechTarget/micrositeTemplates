@@ -483,6 +483,27 @@ audio, canvas, video {
   margin: 0 0 25px;
   overflow: hidden;
   position: relative;
+  /*.arrow {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  .verticalNavigationArrow {
+    @extend .arrow;
+    top: 0;
+    border-top: $ct-navigation-vertical-arrow-width-y solid transparent;
+    border-bottom: $ct-navigation-vertical-arrow-width-y solid transparent;
+  }
+
+  .horizontalNavigationArrow {
+    @extend .arrow;
+    left: $ct-navigation-horizontal-arrow-align;
+    border-left: $ct-navigation-horizontal-arrow-width-x solid transparent;
+    border-right: $ct-navigation-horizontal-arrow-width-x solid transparent;
+  }*/
 }
 .contentTabs .contentTabsNav {
   background-color: #fafafa;
@@ -514,23 +535,6 @@ audio, canvas, video {
   border-bottom: none;
   position: relative;
 }
-.contentTabs .arrow, .contentTabs .verticalNavigationArrow, .contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after, .contentTabs.tabsVerticalRight .contentTabsNav li.active a:before, .contentTabs .horizontalNavigationArrow, .contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after, .contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 0;
-  width: 0;
-}
-.contentTabs .verticalNavigationArrow, .contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after, .contentTabs.tabsVerticalRight .contentTabsNav li.active a:before {
-  top: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-}
-.contentTabs .horizontalNavigationArrow, .contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after, .contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
-  left: 46%;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-}
 .contentTabs .verticalNavigation, .contentTabs.tabsVerticalLeft .contentTabsNav, .contentTabs.tabsVerticalRight .contentTabsNav {
   width: 180px;
   height: 450px;
@@ -541,10 +545,11 @@ audio, canvas, video {
 .contentTabs.tabsVerticalLeft .contentTabsNav {
   float: left;
   border-right: 1px solid #cccccc;
-}
-.contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after {
-  right: -12px;
-  border-left: 12px solid #19527f;
+  /*li.active a:after {
+    @extend .verticalNavigationArrow;
+    right: -$ct-navigation-vertical-arrow-width-x;
+    border-left: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
+  }*/
 }
 .contentTabs.tabsVerticalLeft .contentTabsNav a {
   padding-left: 10px;
@@ -556,10 +561,11 @@ audio, canvas, video {
 .contentTabs.tabsVerticalRight .contentTabsNav {
   float: right;
   border-left: 1px solid #cccccc;
-}
-.contentTabs.tabsVerticalRight .contentTabsNav li.active a:before {
-  left: -12px;
-  border-right: 12px solid #19527f;
+  /*li.active a:before {
+    @extend .verticalNavigationArrow;
+    left: -$ct-navigation-vertical-arrow-width-x;
+    border-right: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
+  }*/
 }
 .contentTabs.tabsVerticalRight .contentTabsNav a {
   padding-right: 10px;
@@ -580,20 +586,36 @@ audio, canvas, video {
 .contentTabs .horizontalNavigation li:first-child, .contentTabs.tabsHorizontalTop .contentTabsNav li:first-child, .contentTabs.tabsHorizontalBottom .contentTabsNav li:first-child {
   border-left: none;
 }
-.contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after {
-  border-bottom: 8px solid white;
-  bottom: 0;
+.contentTabs.tabsHorizontalTop .contentTabsNav {
+      /*li.active a:after {
+        @extend .horizontalNavigationArrow;
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-top: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: $ct-tab-height;
+        } @else if $ct-navigation-horizontal-arrow-type == "innie" {
+          border-bottom: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          bottom: 0;
+        }
+
+      }*/
 }
 .contentTabs.tabsHorizontalBottom .contentTabsNav {
   position: relative;
   top: 470px;
+      /*li.active a:before {
+        @extend .horizontalNavigationArrow;
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-bottom: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: -10px;
+        } @else if $ct-navigation-horizontal-arrow-type == "innie" {
+          border-top: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: 0;
+        }
+
+      }*/
 }
 .contentTabs.tabsHorizontalBottom .contentTabsNav ul {
   border-top: 1px solid #cccccc;
-}
-.contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
-  border-top: 8px solid white;
-  top: 0;
 }
 .contentTabs.tabsHorizontalBottom .contentTabsPanelCollection {
   margin-top: -35px;
