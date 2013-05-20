@@ -1,0 +1,16 @@
+extends layoutEmbedded
+
+block content
+  #micrositeContainer
+    #micrositeContainerInner
+      #micrositeContainerCompress
+        include header
+        #micrositeContent
+          #micrositeContentColumnFull
+            include wayfinder
+            include heroCarousel
+          #micrositeContentColumnLeft
+            include railContent
+          #micrositeContentColumnRight
+            include contentTabs
+        include footer
