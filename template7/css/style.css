@@ -136,7 +136,7 @@ audio, canvas, video {
 
 #micrositeContainer {
   border-top: none;
-  margin: 0 0 15px;
+  margin: 0 0 20px;
 }
 #micrositeContainer #micrositeContainerInner {
   margin: 0;
@@ -147,8 +147,13 @@ audio, canvas, video {
 }
 
 #micrositeContent {
-  overflow: hidden;
-  margin: 0 15px;
+  *zoom: 1;
+  margin: 0 20px;
+}
+#micrositeContent:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #micrositeContent #micrositeContentColumnFull {
   margin: 0;
@@ -729,7 +734,7 @@ audio, canvas, video {
 }
 .contentTabs.pinnedPanelLeft .contentTabsPanelContent {
   float: right;
-  width: 700px;
+  width: 690px;
   height: 470px;
   padding: 0 10px 0;
   overflow-y: scroll;

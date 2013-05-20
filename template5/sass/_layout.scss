@@ -3,7 +3,7 @@
 
 #micrositeContainer {
   border-top: none;
-  margin: 0 0 15px;
+  margin: 0 0 20px;
 
   #micrositeContainerInner {
     margin: 0;
@@ -19,7 +19,7 @@
 
 #micrositeContent {
   @include pie-clearfix;
-  margin: 0 15px;
+  margin: 0 $microsite-content-gutter-width;
 
   #micrositeContentColumnFull {
     margin: 0;

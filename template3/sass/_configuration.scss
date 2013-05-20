@@ -1,5 +1,6 @@
 // microsite customization
 $microsite-width: 100%;
+$microsite-content-gutter-width: 20px;
 $microsite-col-left-width: 620px;
 $microsite-col-right-width: 300px;
 $microsite-border-color: #c8c8c8;
@@ -35,27 +36,10 @@ $ct-navigation-horizontal-arrow-color: #fff;
 $ct-navigation-horizontal-arrow-align: 46%;
 $ct-navigation-horizontal-arrow-width-x: 8px;
 $ct-navigation-horizontal-arrow-width-y: 8px;
-$ct-pinned-panel-left-total-width: 945px;
+$ct-pinned-panel-left-total-width: 935px;
 $ct-pinned-panel-left-intro-width: 245px;
 $ct-pinned-panel-left-bgColor: #fff;
 $ct-pinned-panel-left-border-color: transparent;
 $ct-pinned-panel-top-height: 100px;
 $ct-pinned-panel-top-bgColor: #ececec;
 $ct-pinned-panel-top-border-color: $ct-tab-active-bgColor;
-
-// featured video component
-$fv-border-color: #dedede;
-$fv-player-height: 360px;
-$fv-player-width: 640px;
-$fv-player-background-color: #000;
-$fv-playlist-height: $fv-player-height + 20px;
-$fv-playlist-width: 284px;
-$fv-playlist-background-color: #ececec;
-$fv-playlist-header-color: #fff;
-$fv-playlist-header-background-color: #666;
-$fv-playlist-header-size: 13px;
-$fv-playlist-item-size: 12px;
-$fv-playlist-item-color: #000;
-$fv-playlist-item-background-color: #fff;
-$fv-playlist-item-border-color: #ccc;
-$fv-playlist-item-active-border-color: #19527f;

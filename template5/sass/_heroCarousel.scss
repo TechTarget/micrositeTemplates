@@ -1,14 +1,6 @@
 @import "compass/css3/transition";
 @import "compass/css3/images";
 
-// component
-$hc-show-text-over-image: true;
-$hc-transition-speed: .5s;
-$hc-hero-image-border: #bbb;
-$hc-hero-image-width: 946px;
-$hc-hero-image-height: 298px;
-$hc-button-color: #1c3e60;
-
 .heroCarousel {
   position: relative;
   margin: 0 0 25px;

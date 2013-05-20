@@ -136,7 +136,7 @@ audio, canvas, video {
 
 #micrositeContainer {
   border-top: none;
-  margin: 0 0 15px;
+  margin: 0 0 20px;
 }
 #micrositeContainer #micrositeContainerInner {
   margin: 0;
@@ -148,7 +148,7 @@ audio, canvas, video {
 
 #micrositeContent {
   *zoom: 1;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 #micrositeContent:after {
   content: "";
@@ -551,7 +551,7 @@ audio, canvas, video {
 }
 .contentTabs.tabsVerticalLeft .contentTabsPanelCollection {
   float: right;
-  width: 766px;
+  width: 756px;
 }
 .contentTabs.tabsVerticalRight .contentTabsNav {
   float: right;
@@ -566,7 +566,7 @@ audio, canvas, video {
 }
 .contentTabs.tabsVerticalRight .contentTabsPanelCollection {
   float: left;
-  width: 766px;
+  width: 756px;
 }
 .contentTabs .horizontalNavigation ul, .contentTabs.tabsHorizontalTop .contentTabsNav ul, .contentTabs.tabsHorizontalBottom .contentTabsNav ul {
   text-align: center;
@@ -651,7 +651,7 @@ audio, canvas, video {
 }
 .contentTabs.pinnedPanelLeft .contentTabsPanelContent {
   float: right;
-  width: 700px;
+  width: 690px;
   height: 430px;
   padding: 0 10px 0;
   overflow-y: scroll;
@@ -717,7 +717,7 @@ audio, canvas, video {
   display: block;
 }
 .heroCarousel .heroCarouselImage img {
-  width: 946px;
+  width: 936px;
   height: 298px;
 }
 .heroCarousel .heroCarouselContent {
