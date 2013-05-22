@@ -1,0 +1,41 @@
+@import "compass/utilities/general/clearfix";
+
+#micrositeContainer {
+  border-top: none;
+  margin: 0 0 20px;
+
+  #micrositeContainerInner {
+    margin: 0;
+
+    #micrositeContainerCompress {
+      margin: 0 auto;
+      width: $microsite-width;
+    }
+
+  }
+
+}
+
+#micrositeContent {
+  @include pie-clearfix;
+  margin: 0 $microsite-content-gutter-width;
+
+  #micrositeContentColumnFull {
+    margin: 0;
+  }
+
+  #micrositeContentColumnLeft {
+    float: left;
+    width: $microsite-col-left-width;
+  }
+
+  #micrositeContentColumnRight {
+    float: right;
+    width: $microsite-col-right-width;
+  }
+
+  .micrositeContentColumnSpan {
+    clear: both;
+  }
+
+}
