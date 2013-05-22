@@ -1,0 +1,356 @@
+.contentTabs {
+  border: 1px solid $ct-border-color;
+  margin: 0 0 25px;
+  overflow: hidden;
+  position: relative;
+
+  // navigation
+  .contentTabsNav {
+    background-color: $ct-navigation-vertical-bgColor;
+    position: relative;
+
+    ul {
+      background-color: $ct-navigation-horizontal-bgColor;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none;
+    }
+
+    li {
+
+      a {
+        color: $ct-tab-color !important;
+        background-color: $ct-tab-bgColor !important;
+        background-repeat: no-repeat;
+        background-position: 50% 15px;
+        display: block;
+        font-size: $ct-tab-size;
+        font-weight: bold;
+        height: $ct-tab-height;
+        padding: $ct-tab-height - 30px 0 0;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $ct-tab-hover-color !important;
+          background-color: $ct-tab-hover-bgColor !important;
+          text-decoration: none !important;
+        }
+
+      }
+
+      &.active a {
+        color: $ct-tab-active-color !important;
+        background-color: $ct-tab-active-bgColor !important;
+        border-bottom: none;
+        position: relative;
+      }
+
+      // in reality these will end up being based on IDs
+      &:nth-child(1) {
+        a {
+          background-image: url('../images/contentTabHorizontalIcon6-off.png');
+        }
+        &.active a, a:hover {
+          background-image: url('../images/contentTabHorizontalIcon6-on.png');
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          background-image: url('../images/contentTabHorizontalIcon3-off.png');
+        }
+        &.active a, a:hover {
+          background-image: url('../images/contentTabHorizontalIcon3-on.png');
+        }
+      }
+
+      &:nth-child(3) {
+        a {
+          background-image: url('../images/contentTabHorizontalIcon2-off.png');
+        }
+        &.active a, a:hover {
+          background-image: url('../images/contentTabHorizontalIcon2-on.png');
+        }
+      }
+
+      &:nth-child(4) {
+        a {
+          background-image: url('../images/contentTabHorizontalIcon7-off.png');
+        }
+        &.active a, a:hover {
+          background-image: url('../images/contentTabHorizontalIcon7-on.png');
+        }
+      }
+
+    }
+
+  }
+
+  // the triangle/notch/pointer/arrow that's inside/outside the tabs
+  .arrow {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  .verticalNavigationArrow {
+    @extend .arrow;
+    top: 0;
+    border-top: $ct-navigation-vertical-arrow-width-y solid transparent;
+    border-bottom: $ct-navigation-vertical-arrow-width-y solid transparent;
+  }
+
+  .horizontalNavigationArrow {
+    @extend .arrow;
+    left: $ct-navigation-horizontal-arrow-align;
+    border-left: $ct-navigation-horizontal-arrow-width-x solid transparent;
+    border-right: $ct-navigation-horizontal-arrow-width-x solid transparent;
+  }
+
+  .verticalNavigation {
+    width: $ct-navigation-vertical-width;
+    height: $ct-height;
+
+    li {
+      border-bottom: 1px solid $ct-border-color;
+    }
+
+  }
+
+  &.tabsVerticalLeft {
+
+    .contentTabsNav {
+      @extend .verticalNavigation;
+      float: left;
+      border-right: 1px solid $ct-border-color;
+
+      li.active a:after {
+        @extend .verticalNavigationArrow;
+        right: -$ct-navigation-vertical-arrow-width-x;
+        border-left: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
+      }
+
+      a {
+        padding-left: $ct-navigation-vertical-padding;
+      }
+
+    }
+
+    .contentTabsPanelCollection {
+      float: right;
+      width: $ct-panel-vertical-width;
+    }
+
+  }
+
+  &.tabsVerticalRight {
+
+    .contentTabsNav {
+      @extend .verticalNavigation;
+      float: right;
+      border-left: 1px solid $ct-border-color;
+
+      li.active a:before {
+        @extend .verticalNavigationArrow;
+        left: -$ct-navigation-vertical-arrow-width-x;
+        border-right: $ct-navigation-vertical-arrow-width-x solid $ct-navigation-vertical-arrow-color;
+      }
+
+      a {
+        padding-right: $ct-navigation-vertical-padding;
+      }
+
+    }
+
+    .contentTabsPanelCollection {
+      float: left;
+      width: $ct-panel-vertical-width;
+    }
+
+  }
+
+  .horizontalNavigation {
+
+    ul {
+      text-align: $ct-navigation-horizontal-align;
+    }
+
+    li {
+      display: inline-block;
+      border-left: 1px solid $ct-tab-border-color;
+      border-bottom: none;
+      width: $ct-navigation-horizontal-tab-width;
+
+      &:first-child {
+        border-left: none;
+      }
+
+    }
+
+  }
+
+  &.tabsHorizontalTop {
+
+    .contentTabsNav {
+
+      @extend .horizontalNavigation;
+
+      li.active a:after {
+        @extend .horizontalNavigationArrow;
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-top: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: $ct-tab-height;
+        } @else if $ct-navigation-horizontal-arrow-type == "innie" {
+          border-bottom: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          bottom: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+  &.tabsHorizontalBottom {
+
+    .contentTabsNav {
+
+      @extend .horizontalNavigation;
+
+      position: relative;
+      top: $ct-height + 20;
+
+      ul {
+        border-top: 1px solid $ct-border-color;
+      }
+
+      li.active a:before {
+        @extend .horizontalNavigationArrow;
+        @if $ct-navigation-horizontal-arrow-type == "outie" {
+          border-bottom: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: -10px;
+        } @else if $ct-navigation-horizontal-arrow-type == "innie" {
+          border-top: $ct-navigation-horizontal-arrow-width-y solid $ct-navigation-horizontal-arrow-color;
+          top: 0;
+        }
+
+      }
+
+    }
+
+    .contentTabsPanelCollection {
+      margin-top: -$ct-navigation-horizontal-height;
+      margin-bottom: $ct-navigation-horizontal-height;
+    }
+
+  }
+
+  // option for disabling any tab navigation
+  &.tabsNone .contentTabsNav {
+    display: none;
+  }
+
+  // panels
+  .contentTabsPanel {
+    display: none;
+    padding: 10px;
+    color: #4c4d4f;
+    height: $ct-height - 20;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    // always display the first panel
+    &:first-child {
+      display: block;
+    }
+
+    p {
+      margin: 0 0 10px !important;
+    }
+
+    h3 {
+      font-size: 16px !important;
+      margin: 0 0 5px !important;
+    }
+
+    .contentTabsPanelIntroGraphic {
+      border: 1px solid #ccc !important;
+      float: right;
+      margin: 0 0 10px 10px;
+    }
+
+  }
+
+  &.pinnedPanelTop {
+
+    .contentTabsPanel {
+      padding: 0;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      height: $ct-height;
+    }
+
+    .contentTabsPanelContent {
+      height: $ct-height - $ct-pinned-panel-top-height;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelIntro {
+      height: $ct-pinned-panel-top-height;
+      background-color: $ct-pinned-panel-top-bgColor;
+      padding: 15px 20px;
+      margin: 0 0 10px;
+      border-bottom: 1px solid $ct-pinned-panel-top-border-color;
+      overflow: hidden;
+    }
+
+  }
+
+  &.pinnedPanelLeft {
+
+    .contentTabsPanel {
+      padding: 0;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelContent {
+      float: right;
+      width: $ct-pinned-panel-left-total-width - $ct-pinned-panel-left-intro-width;
+      height: $ct-height - 20;
+      padding: 0 10px 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .contentTabsPanelIntro {
+      float: left;
+      width: $ct-pinned-panel-left-intro-width;
+      padding: 10px;
+      background-color: $ct-pinned-panel-left-bgColor;
+      border-right: 1px solid $ct-pinned-panel-left-border-color;
+      height: $ct-height - 20;
+      overflow: hidden;
+    }
+
+    .oneColList, .twoColGrid {
+      clear: none;
+    }
+
+    .contentTabsPanelIntroGraphic {
+      float: none;
+      margin: 0 0 10px;
+    }
+
+  }
+
+}
+
+/* may or may not be used */
+.contentTabsCaption {
+  font-size: 26px;
+  margin: 0 0 5px !important;
+}
