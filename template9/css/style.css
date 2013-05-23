@@ -393,10 +393,11 @@ audio, canvas, video {
   line-height: 25px;
 }
 #micrositeAdvertisement #micrositeClose {
+  display: none;
   float: right;
   border-left: 1px solid #b1b1b1;
 }
-#micrositeAdvertisement a {
+#micrositeAdvertisement #micrositeClose a {
   display: block;
   padding: 0 10px 0 20px;
   background: url(../images/iconMicrositeClose.png) 7px 6px no-repeat;
@@ -405,7 +406,7 @@ audio, canvas, video {
   font-size: 12px;
   line-height: 25px;
 }
-#micrositeAdvertisement a:hover {
+#micrositeAdvertisement #micrositeClose a:hover {
   text-decoration: none;
 }
 
@@ -523,8 +524,8 @@ audio, canvas, video {
 }
 .contentTabs .verticalNavigationArrow, .contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after, .contentTabs.tabsVerticalRight .contentTabsNav li.active a:before {
   top: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
 }
 .contentTabs .horizontalNavigationArrow, .contentTabs.tabsHorizontalTop .contentTabsNav li.active a:after, .contentTabs.tabsHorizontalBottom .contentTabsNav li.active a:before {
   left: 46%;
@@ -543,8 +544,8 @@ audio, canvas, video {
   border-right: 1px solid #cccccc;
 }
 .contentTabs.tabsVerticalLeft .contentTabsNav li.active a:after {
-  right: -12px;
-  border-left: 12px solid #19527f;
+  right: 0;
+  border-left: 0 solid #19527f;
 }
 .contentTabs.tabsVerticalLeft .contentTabsNav a {
   padding-left: 10px;
@@ -558,8 +559,8 @@ audio, canvas, video {
   border-left: 1px solid #cccccc;
 }
 .contentTabs.tabsVerticalRight .contentTabsNav li.active a:before {
-  left: -12px;
-  border-right: 12px solid #19527f;
+  left: 0;
+  border-right: 0 solid #19527f;
 }
 .contentTabs.tabsVerticalRight .contentTabsNav a {
   padding-right: 10px;

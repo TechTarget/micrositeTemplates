@@ -393,10 +393,11 @@ audio, canvas, video {
   line-height: 25px;
 }
 #micrositeAdvertisement #micrositeClose {
+  display: none;
   float: right;
   border-left: 1px solid #b1b1b1;
 }
-#micrositeAdvertisement a {
+#micrositeAdvertisement #micrositeClose a {
   display: block;
   padding: 0 10px 0 20px;
   background: url(../images/iconMicrositeClose.png) 7px 6px no-repeat;
@@ -405,7 +406,7 @@ audio, canvas, video {
   font-size: 12px;
   line-height: 25px;
 }
-#micrositeAdvertisement a:hover {
+#micrositeAdvertisement #micrositeClose a:hover {
   text-decoration: none;
 }
 
