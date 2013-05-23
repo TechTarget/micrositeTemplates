@@ -1,0 +1,18 @@
+extends layoutEmbedded
+
+block content
+  #micrositeContainer
+    #micrositeContainerInner
+      #micrositeContainerCompress
+        include header
+        #micrositeContent
+          #micrositeContentColumnFull
+            include wayfinder
+            include heroCarousel
+          #micrositeContentColumnLeft
+            include featuredVideoSplash
+            br
+            h2 Flite Unit Here
+          #micrositeContentColumnRight
+            include contentTabs
+        include footer
