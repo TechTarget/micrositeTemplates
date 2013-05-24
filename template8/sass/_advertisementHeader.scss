@@ -1,0 +1,37 @@
+#micrositeAdvertisement {
+  overflow: hidden;
+  margin: 15px 0 0 0;
+  height: 25px;
+  background-color: #999;
+  color: #fff;
+
+  h3 {
+    float: left;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 25px;
+  }
+
+  #micrositeClose {
+    display: none;
+    float: right;
+    border-left: 1px solid #b1b1b1;
+
+    a {
+      display: block;
+      padding: 0 10px 0 20px;
+      background: url(../images/iconMicrositeClose.png) 7px 6px no-repeat;
+      color: #fff;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 25px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+}
