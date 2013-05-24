@@ -1,0 +1,42 @@
+#micrositeContentColumnRight {
+  margin-top: 27px;
+}
+
+#micrositeContentColumnLeft {
+  width: 620px;
+
+  .contentTabsPanelIntro {
+    display: none;
+  }
+
+  .contentTabs {
+    margin-top: -25px;
+    border-top: none;
+  }
+
+  .heroCarouselContentInner {
+    padding: 0 20px;
+  }
+
+  .heroCarouselHeader {
+    color: #1c3e60;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0 0 5px;
+  }
+
+  .heroCarouselPrevious {
+    left: 10px;
+  }
+
+  .heroCarouselNext {
+    right: 10px;
+  }
+
+  .heroCarouselPagination {
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+  }
+
+}
