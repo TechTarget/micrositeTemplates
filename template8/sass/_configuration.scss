@@ -44,6 +44,21 @@ $ct-pinned-panel-top-height: 100px;
 $ct-pinned-panel-top-bgColor: #ececec;
 $ct-pinned-panel-top-border-color: $ct-tab-active-bgColor;
 
+// hero carousel component
+$hc-show-text-over-image: true;
+$hc-transition-speed: .5s;
+$hc-hero-image-border: #bbb;
+$hc-hero-image-width: 618px;
+$hc-hero-image-height: 177px;
+$hc-text-bgColor: transparent;
+$hc-text-color: #333;
+$hc-text-width: 375px;
+$hc-text-margin: 0;
+$hc-text-height: $hc-hero-image-height;
+$hc-text-valign: middle;
+$hc-button-bgColor: #1c3e60;
+$hc-button-color: #fff;
+
 // featured video component
 $fv-border-color: #dedede;
 $fv-player-height: 360px;
@@ -60,18 +75,3 @@ $fv-playlist-item-color: #000;
 $fv-playlist-item-background-color: #fff;
 $fv-playlist-item-border-color: #ccc;
 $fv-playlist-item-active-border-color: #19527f;
-
-// hero carousel component
-$hc-show-text-over-image: true;
-$hc-transition-speed: .5s;
-$hc-hero-image-border: #bbb;
-$hc-hero-image-width: 618px;
-$hc-hero-image-height: 177px;
-$hc-text-bgColor: transparent;
-$hc-text-color: #333;
-$hc-text-width: 375px;
-$hc-text-margin: 0;
-$hc-text-height: $hc-hero-image-height;
-$hc-text-valign: middle;
-$hc-button-bgColor: #1c3e60;
-$hc-button-color: #fff;
