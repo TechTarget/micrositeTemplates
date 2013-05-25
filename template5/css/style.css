@@ -853,12 +853,16 @@ audio, canvas, video {
   background-color: transparent;
 }
 .heroCarousel .heroCarouselNavigationCounter {
-  color: #fff;
-  background-color: #333;
-  padding: 2px 4px;
+  color: #000;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 2px 0;
   position: absolute;
   top: -10px;
-  right: -20px;
+  left: 110px;
+  text-align: center;
+  width: 60px;
 }
 
 .filmstripWindow > ul > li {
